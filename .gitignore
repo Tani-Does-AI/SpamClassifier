@@ -58,3 +58,5 @@ Thumbs.db
 # Logs and databases
 *.log
 *.
+
+nltk_data/

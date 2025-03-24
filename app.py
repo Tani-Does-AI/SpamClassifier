@@ -3,6 +3,10 @@ import joblib
 import nltk
 from nltk.corpus import stopwords
 import string
+import nltk
+
+nltk.download('stopwords', download_dir='nltk_data/')
+nltk.data.path.append('nltk_data/')  # Add to NLTK's data path
 
 app = Flask(__name__)
 
@@ -42,3 +46,11 @@ def home():
 
 if __name__ == '__main__':
     app.run(debug=True)
+    
+
+ # Ensure NLTK data exists
+try:
+    from nltk.corpus import stopwords
+except LookupError:
+    import nltk
+    nltk.download('stopwords')   

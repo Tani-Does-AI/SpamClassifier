@@ -7,6 +7,13 @@ import nltk
 from nltk.corpus import stopwords
 import string
 import os
+import nltk
+
+
+try:
+    nltk.data.find('corpora/stopwords')
+except LookupError:
+    nltk.download('stopwords')
 
 # Download stopwords
 nltk.download('stopwords')
